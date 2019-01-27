@@ -39,7 +39,6 @@ class Game:
             dt = self.clock.tick(FPS)
             self.update()
             self.events()
-            # self.render()
         pass
 
     def events(self):

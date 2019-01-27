@@ -28,22 +28,16 @@ class Player(pg.sprite.Sprite):
         self.move()
         self.manage_collisions()
 
+    def jump(self):
+        if not self.is_midair():
+            self.vel.y = -PLAYER_JUMP_STR
+
     def move(self):
         if not self.is_midair():
             self.acc.x += self.vel.x * -FRICTION
         self.vel += self.acc
         self.pos += self.vel + 0.5 * self.acc
         self.rect.midbottom = self.pos
-
-    def jump(self):
-        if not self.is_midair():
-            self.vel.y = -PLAYER_JUMP_STR
-
-    def is_midair(self):
-        self.rect.y += 1
-        answer = not pg.sprite.spritecollideany(self, self.game.platforms, False)
-        self.rect.y -= 1
-        return answer
 
     def manage_collisions(self):
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False)
@@ -53,6 +47,12 @@ class Player(pg.sprite.Sprite):
                 if self.rect.centery < top.rect.top:
                     self.pos.y = top.rect.top
                     self.vel.y = 0
+
+    def is_midair(self):
+        self.rect.y += 1
+        answer = not pg.sprite.spritecollideany(self, self.game.platforms, False)
+        self.rect.y -= 1
+        return answer
 
 
 class Platform(pg.sprite.Sprite):
