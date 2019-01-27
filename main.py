@@ -23,9 +23,11 @@ class Game:
     def new(self):
         self.all_sprites = pg.sprite.Group()
         self.platforms = pg.sprite.Group()
+        self.players = pg.sprite.Group()
+        self.enemies = pg.sprite.Group()
 
         self.player = Player(self)
-        self.all_sprites.add(self.player)
+        Enemy(self, vec(WIDTH * 3 / 4, HEIGHT / 2), BASE_ENEMY_DETECT_RANGE, BASE_ENEMY_ATTACK_RANGE)
 
         platform = Platform(0, HEIGHT - 100, WIDTH, 20)
         self.all_sprites.add(platform)
@@ -53,7 +55,7 @@ class Game:
         pass
 
     def update(self):
-        self.player.update()
+        self.all_sprites.update()
 
     def load_img(self, name):
         pass
