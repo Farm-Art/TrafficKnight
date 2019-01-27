@@ -20,22 +20,29 @@ class Player(pg.sprite.Sprite):
         self.acc = vec(0, GRAVITY)
         keys = pg.key.get_pressed()
         if keys[pg.K_LEFT]:
-            self.acc.x = -PLAYER_ACC
+            if not self.is_midair():
+                self.acc.x = -PLAYER_ACC
         if keys[pg.K_RIGHT]:
-            self.acc.x = PLAYER_ACC
+            if not self.is_midair():
+                self.acc.x = PLAYER_ACC
         self.move()
 
     def move(self):
-        self.acc.x += self.vel.x * -FRICTION
+        if not self.is_midair():
+            self.acc.x += self.vel.x * -FRICTION
         self.vel += self.acc
         self.pos += self.vel + 0.5 * self.acc
         self.rect.midbottom = self.pos
 
     def jump(self):
-        self.rect.y += 1
-        if pg.sprite.spritecollideany(self, self.game.platforms, False):
+        if not self.is_midair():
             self.vel.y = -PLAYER_JUMP_STR
+
+    def is_midair(self):
+        self.rect.y += 1
+        answer = not pg.sprite.spritecollideany(self, self.game.platforms, False)
         self.rect.y -= 1
+        return answer
 
 
 class Platform(pg.sprite.Sprite):
