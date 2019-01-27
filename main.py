@@ -55,13 +55,6 @@ class Game:
 
     def update(self):
         self.player.update()
-        collisions = pg.sprite.spritecollide(self.player, self.platforms, False)
-        if collisions:
-            top = min(collisions, key=lambda x: x.rect.top)
-            if self.player.vel.y > 0:
-                if self.player.rect.centery < top.rect.top:
-                    self.player.pos.y = top.rect.top
-                    self.player.vel.y = 0
 
     def load_img(self, name):
         pass
