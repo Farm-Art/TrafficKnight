@@ -71,18 +71,11 @@ class Enemy(Entity):
         super().__init__(game, pos, 30, 10, BASE_ENEMY_SPEED, pg.Surface((64, 64)))
         game.enemies.add(self)
 
-        self.attack_range = pg.sprite.Sprite()
-        self.attack_range.image = pg.Surface((atk_range * 2, atk_range * 2))
-        self.attack_range.rect = self.attack_range.image.get_rect()
-        self.attack_range.rect.center = self.rect.center
-
         self.image.fill(pg.Color('blue'))
 
-        self.range = pg.sprite.Sprite()
-        self.range.image = pg.Surface((range * 2, range * 2))
-        self.range.rect = self.range.image.get_rect()
-        self.range.rect.center = self.rect.center
-        self.range.center = self.rect.center
+        self.attack_range = atk_range
+
+        self.range = range
 
     def update(self):
         self.acc = vec(0, GRAVITY)
@@ -93,25 +86,21 @@ class Enemy(Entity):
                     self.acc.x = -self.speed
                 else:
                     self.acc.x = self.speed
-        # if self.player_in_range():
-        #     if self.game.player
-        #     if self.game.player.pos.x < self.pos.x:
-        #         self.acc.x = -self.speed
-        #     elif self.game.player.pos.x > self.pos.x:
-        #         self.acc.x = self.speed
-        #     else:
-        #         self.acc.x = 0
         self.move()
         self.manage_collisions()
-        self.range.rect.center = self.rect.center
-        self.attack_range.rect.center = self.rect.center
 
     def player_in_range(self):
-        return pg.sprite.spritecollideany(self.range, self.game.players)
+        px, py = self.game.player.pos.x, self.game.player.pos.y
+        sx, sy = self.pos.x, self.pos.y
+        return (px - sx) ** 2 + (py - sy) ** 2 <= self.range ** 2
 
     def player_in_attack_range(self):
-        return pg.sprite.spritecollideany(self.attack_range, self.game.players)
-
+        px, py = self.game.player.pos.x, self.game.player.pos.y
+        sx, sy = self.pos.x, self.pos.y
+        distance = ((px - sx) ** 2 + (py - sy) ** 2) ** 0.5
+        if self.attack_range - ATTACK_MARGIN <= distance <= self.attack_range + ATTACK_MARGIN:
+            return True
+        return False
 
 class Platform(pg.sprite.Sprite):
     def __init__(self, x, y, w, h):
