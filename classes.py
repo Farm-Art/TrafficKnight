@@ -65,6 +65,27 @@ class Player(Entity):
         self.move()
         self.manage_collisions()
 
+    def manage_collisions(self):
+        super().manage_collisions()
+        collision = pg.sprite.spritecollideany(self, self.game.enemies)
+        if collision:
+            if self.vel.y > 0 and self.rect.bottom < collision.rect.centery:
+                collision.kill()
+            else:
+                self.take_damage(collision)
+
+    def take_damage(self, enemy):
+        self.health = max(0, self.health - enemy.damage)
+        if self.health == 0:
+            self.die()
+        else:
+            self.vel = vec(self.rect.centerx - enemy.rect.centerx,
+                           enemy.rect.centery - self.rect.centery)
+
+    def die(self):
+        self.game.show_go_screen()
+        self.kill()
+
 
 class Enemy(Entity):
     def __init__(self, game, pos, range, atk_range):
@@ -80,12 +101,11 @@ class Enemy(Entity):
     def update(self):
         self.acc = vec(0, GRAVITY)
         if self.player_in_range():
-            if not self.player_in_attack_range():
-                distance = self.game.player.pos.x - self.pos.x
-                if distance < 0:
-                    self.acc.x = -self.speed
-                else:
-                    self.acc.x = self.speed
+            distance = self.game.player.pos.x - self.pos.x
+            if distance < 0:
+                self.acc.x = -self.speed
+            else:
+                self.acc.x = self.speed
         self.move()
         self.manage_collisions()
 
