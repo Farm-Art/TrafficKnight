@@ -71,6 +71,7 @@ class Player(Entity):
         if collision:
             if self.vel.y > 0 and self.rect.bottom < collision.rect.centery:
                 collision.kill()
+                self.vel.y = -PLAYER_JUMP_STR
             else:
                 self.take_damage(collision)
 
