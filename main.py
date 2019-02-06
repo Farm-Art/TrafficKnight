@@ -26,8 +26,8 @@ class Game:
         self.players = pg.sprite.Group()
         self.enemies = pg.sprite.Group()
 
-        self.player = Player(self)
-        Enemy(self, vec(WIDTH * 3 / 4, HEIGHT / 2), BASE_ENEMY_DETECT_RANGE, BASE_ENEMY_ATTACK_RANGE)
+        self.player = Player(self, (WIDTH, 0))
+        Enemy(self, vec(WIDTH / 4, HEIGHT / 2), BASE_ENEMY_DETECT_RANGE, BASE_ENEMY_ATTACK_RANGE)
 
         platform = Platform(0, HEIGHT - 100, WIDTH, 20)
         self.all_sprites.add(platform)
@@ -38,7 +38,7 @@ class Game:
         self.clock.tick(FPS)
         self.playing = True
         while self.playing:
-            dt = self.clock.tick(FPS)
+            self.dt = self.clock.tick(FPS)
             self.update()
             self.events()
         pass
@@ -48,9 +48,6 @@ class Game:
             if event.type == pg.QUIT:
                 self.terminate()
                 return
-            elif event.type == pg.KEYDOWN:
-                if event.key == pg.K_SPACE:
-                      self.player.jump()
         self.render()
         pass
 
