@@ -116,7 +116,8 @@ class Player(Entity):
         else:
             self.animations[name] = []
         for i in range(1, length + 1):
-            image = pg.image.load('data/animations/player/' + name + '/' + (str(i) + '.png').rjust(8, '0'))
+            file = 'data/animations/player/' + name + '/' + (str(i) + '.png').rjust(8, '0')
+            image = pg.transform.scale(pg.image.load(file), (192, 192))
             self.animations[name] += [image]
 
     def manage_animations(self):
@@ -183,6 +184,10 @@ class Enemy(Entity):
         return False
 
     def manage_animations(self):
+        if self.vel.x > 0:
+            self.direction = 'right'
+        elif self.vel.x < 0:
+            self.direction = 'left'
         self.accumulator += self.game.dt
         if not self.is_midair():
             if abs(self.vel.x) <= IDLE_ACC_MARGIN:
@@ -202,7 +207,7 @@ class Enemy(Entity):
         for i in range(1, length + 1):
             file = 'data/animations/cookieneg/{}/{}'.format(name, (str(i) + '.png').rjust(8, '0'))
             image = pg.image.load(file).convert_alpha()
-            image = pg.transform.scale(image, (192, 192))
+            image = pg.transform.scale(image, (160, 160))
             self.animations[name] += [image]
 
 
