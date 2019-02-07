@@ -218,3 +218,21 @@ class Platform(pg.sprite.Sprite):
         self.image.fill(pg.Color('green'))
         self.rect = self.image.get_rect()
         self.rect.topleft = x, y
+
+
+class Camera:
+    def __init__(self):
+        self.dx, self.dy, self.x, self.y = [0] * 4
+
+    def adjust(self, target):
+        self.dx = -(target.rect.centerx - WIDTH // 2)
+        self.dy = -(target.rect.centery - HEIGHT // 2)
+        self.x += self.dx
+        self.y += self.dy
+
+    def apply(self, object):
+        if isinstance(object, Entity):
+            object.pos.x += self.dx
+            object.pos.y += self.dy
+        object.rect.x += self.dx
+        object.rect.y += self.dy

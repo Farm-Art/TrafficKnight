@@ -30,6 +30,9 @@ class Game:
         Enemy(self, vec(WIDTH / 4, HEIGHT / 2), BASE_ENEMY_DETECT_RANGE, BASE_ENEMY_ATTACK_RANGE)
 
         platform = Platform(0, HEIGHT - 100, WIDTH, 20)
+
+        self.camera = Camera()
+
         self.all_sprites.add(platform)
         self.platforms.add(platform)
         self.run()
@@ -62,6 +65,9 @@ class Game:
 
     def render(self):
         self.screen.fill([0] * 3)
+        self.camera.adjust(self.player)
+        for sprite in self.all_sprites:
+            self.camera.apply(sprite)
         self.all_sprites.draw(self.screen)
         pg.display.flip()
 
