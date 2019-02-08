@@ -32,13 +32,27 @@ class Entity(pg.sprite.Sprite):
 
     def manage_collisions(self):
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
-                                             collided=pg.sprite.collide_mask)
+                                             pg.sprite.collide_mask)
         if collisions:
             top = max(collisions, key=lambda x: x.rect.top)
             if self.vel.y > 0:
                 if self.rect.centery < top.rect.top:
                     self.pos.y = top.rect.top
+                    self.rect.midbottom = self.pos
                     self.vel.y = 0
+            collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
+                                                 pg.sprite.collide_mask)
+            if collisions:
+                if self.vel.y <= 0:
+                    if self.vel.x > 0:
+                        collisions = filter(lambda x: x.rect.centery > self.rect.top, collisions)
+                        self.rect.right = max(collisions, key=lambda x: x.rect.left).rect.left
+                        self.pos = vec(self.rect.midbottom)
+                        self.vel.x = 0
+                    elif self.vel.x < 0:
+                        self.rect.left = max(collisions, key=lambda x: x.rect.right).rect.right
+                        self.pos = vec(self.rect.midbottom)
+                        self.vel.x = 0
 
 
     def is_midair(self):
@@ -73,7 +87,6 @@ class Entity(pg.sprite.Sprite):
         if self.direction == 'left':
             self.image = pg.transform.flip(self.image, True, False)
             self.mask = pg.mask.from_surface(self.image)
-            # self.mask = self.mask.scale((-self.image.get_width(), self.image.get_height()))
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
