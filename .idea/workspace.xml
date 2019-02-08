@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d69ee-b502-408b-bd83-048fbc0bddb8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customlevel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/static/tiles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/leveleditor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +26,7 @@
       <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leveleditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-350">
+            <state relative-caret-position="160">
               <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
             </state>
           </provider>
@@ -50,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+              <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -180,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.leveleditor">
+  <component name="RunManager" selected="Python.main">
     <configuration name="assets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TrafficKnight" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -261,9 +256,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.leveleditor" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.classes" />
+        <item itemvalue="Python.leveleditor" />
         <item itemvalue="Python.assets" />
       </list>
     </recent_temporary>
@@ -356,19 +351,26 @@
       <option name="project" value="LOCAL" />
       <updated>1549562462714</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="introduce level editor, level loading">
+      <created>1549653096868</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1549653096869</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -408,7 +410,8 @@
     <MESSAGE value="introduce animations" />
     <MESSAGE value="adjust sprite sizes, fix cookieneg animation flip" />
     <MESSAGE value="introduce camera movement" />
-    <option name="LAST_COMMIT_MESSAGE" value="introduce camera movement" />
+    <MESSAGE value="introduce level editor, level loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="introduce level editor, level loading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -707,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -737,15 +733,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leveleditor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-350">
+        <state relative-caret-position="160">
           <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+          <caret line="45" column="24" lean-forward="true" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
         </state>
       </provider>
     </entry>

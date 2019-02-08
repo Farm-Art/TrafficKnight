@@ -30,10 +30,10 @@ class Entity(pg.sprite.Sprite):
         self.pos += self.vel + 0.5 * self.acc
         self.rect.midbottom = self.pos
 
-    def manage_collisions(self, mt):
+    def manage_collisions(self):
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False)
         if collisions:
-            top = min(collisions, key=lambda x: x.rect.top)
+            top = max(collisions, key=lambda x: x.rect.top)
             if self.vel.y > 0:
                 if self.rect.centery < top.rect.top:
                     self.pos.y = top.rect.top
@@ -92,7 +92,7 @@ class Player(Entity):
         self.move()
         self.manage_collisions()
 
-    def manage_collisions(self, mt):
+    def manage_collisions(self):
         super().manage_collisions()
         collision = pg.sprite.spritecollideany(self, self.game.enemies)
         if collision:
