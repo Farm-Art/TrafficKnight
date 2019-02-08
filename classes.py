@@ -1,15 +1,15 @@
-import pygame as pg
+from assets import *
 from settings import *
 vec = pg.math.Vector2
 
 class Entity(pg.sprite.Sprite):
-    def __init__(self, game, pos, health, damage, speed):
+    def __init__(self, game, x, y, health, damage, speed):
         super().__init__(game.all_sprites)
         self.game = game
 
         self.direction = 'right'
 
-        self.pos = pos
+        self.pos = vec(x, y)
         self.acc = vec(0, 0)
         self.vel = vec(0, 0)
 
@@ -30,7 +30,7 @@ class Entity(pg.sprite.Sprite):
         self.pos += self.vel + 0.5 * self.acc
         self.rect.midbottom = self.pos
 
-    def manage_collisions(self):
+    def manage_collisions(self, mt):
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False)
         if collisions:
             top = min(collisions, key=lambda x: x.rect.top)
@@ -38,6 +38,7 @@ class Entity(pg.sprite.Sprite):
                 if self.rect.centery < top.rect.top:
                     self.pos.y = top.rect.top
                     self.vel.y = 0
+
 
     def is_midair(self):
         if self.rect is None:
@@ -58,24 +59,22 @@ class Entity(pg.sprite.Sprite):
         self.frame += self.accumulator // FRAME_DUR
         self.accumulator %= FRAME_DUR
         self.frame %= len(self.animations[name])
-        self.image = self.animations[name][self.frame].convert_alpha()
+        self.image, self.mask = self.animations[name][self.frame]
         if self.direction == 'left':
             self.image = pg.transform.flip(self.image, True, False)
+            self.mask = self.mask.scale((-self.image.get_width(), self.image.get_height()))
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
 
 class Player(Entity):
-    def __init__(self, game, pos):
-        super().__init__(game, vec(pos), 100, [10, 15, 30], PLAYER_ACC)
+    def __init__(self, game, x, y):
+        super().__init__(game, x, y, 100, [10, 15, 30], PLAYER_ACC)
         game.players.add(self)
 
-        self.rect = None
+        self.animations = PLAYER_ANIMATIONS
 
-        self.load_animation('run', 40)
-        self.load_animation('idle', 60)
-        self.load_animation('fall', 1)
-        self.load_animation('jump', 1)
+        self.rect = None
 
     def update(self):
         self.manage_animations()
@@ -93,9 +92,9 @@ class Player(Entity):
         self.move()
         self.manage_collisions()
 
-    def manage_collisions(self):
+    def manage_collisions(self, mt):
         super().manage_collisions()
-        collision = pg.sprite.spritecollideany(self, self.game.enemies, collided=pg.sprite.collide_mask)
+        collision = pg.sprite.spritecollideany(self, self.game.enemies)
         if collision:
             if self.vel.y > 0 and self.rect.bottom < collision.rect.centery:
                 collision.kill()
@@ -109,16 +108,6 @@ class Player(Entity):
             self.die()
         else:
             self.vel.x = KNOCKBACK if self.pos.x > enemy.pos.x else -KNOCKBACK
-
-    def load_animation(self, name, length):
-        if name in self.animations:
-            self.animations[name].clear()
-        else:
-            self.animations[name] = []
-        for i in range(1, length + 1):
-            file = 'data/animations/player/' + name + '/' + (str(i) + '.png').rjust(8, '0')
-            image = pg.transform.scale(pg.image.load(file), (192, 192))
-            self.animations[name] += [image]
 
     def manage_animations(self):
         if self.vel.x > 0:
@@ -137,20 +126,20 @@ class Player(Entity):
             self.animate('fall')
 
     def die(self):
-        self.game.show_go_screen()
         self.kill()
+        self.game.show_go_screen()
 
 
 class Enemy(Entity):
-    def __init__(self, game, pos, range, atk_range):
-        super().__init__(game, pos, 30, 10, BASE_ENEMY_SPEED,)
+    def __init__(self, game, x, y,
+                 range=BASE_ENEMY_DETECT_RANGE,
+                 atk_range=BASE_ENEMY_ATTACK_RANGE):
+        super().__init__(game, x, y, 30, 10, BASE_ENEMY_SPEED)
         game.enemies.add(self)
-        self.load_animation('run', 80)
-        self.load_animation('idle', 80)
-        self.load_animation('jump', 1)
-        self.load_animation('fall', 1)
+        self.animations = COOKIENEG_ANIMATIONS
 
-        self.image = self.animations['idle'][0]
+        self.image = self.animations['idle'][0][0]
+        self.mask = self.animations['idle'][0][1]
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
@@ -199,30 +188,30 @@ class Enemy(Entity):
         elif self.vel.y > 0:
             self.animate('fall')
 
-    def load_animation(self, name, length):
-        if name in self.animations:
-            self.animations[name].clear()
-        else:
-            self.animations[name] = []
-        for i in range(1, length + 1):
-            file = 'data/animations/cookieneg/{}/{}'.format(name, (str(i) + '.png').rjust(8, '0'))
-            image = pg.image.load(file).convert_alpha()
-            image = pg.transform.scale(image, (160, 160))
-            self.animations[name] += [image]
-
 
 class Platform(pg.sprite.Sprite):
-    def __init__(self, x, y, w, h):
+    def __init__(self, game, x, y, type):
         super().__init__()
-        self.image = pg.Surface((w, h))
-        self.image.fill(pg.Color('green'))
+        if game is not None:
+            game.platforms.add(self)
+            game.all_sprites.add(self)
+        self.type = type
+        self.image = TILES[type]
+        self.mask = pg.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.rect.topleft = x, y
+
+    def get_init(self):
+        if self.type == 'pspawn':
+            return 'Player(self, {}, {})'.format(*self.rect.midbottom)
+        elif self.type == 'espawn':
+            return 'Enemy(self, {}, {})'.format(*self.rect.midbottom)
+        return 'Platform(self, {}, {}, \'{}\')'.format(self.rect.x, self.rect.y, self.type)
 
 
 class Camera:
     def __init__(self):
-        self.dx, self.dy, self.x, self.y = [0] * 4
+        self.dx, self.dy, self.x, self.y = 0, 0, 0, 0
 
     def adjust(self, target):
         self.dx = -(target.rect.centerx - WIDTH // 2)

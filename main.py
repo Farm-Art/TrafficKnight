@@ -1,5 +1,4 @@
 from classes import *
-import os
 
 class Game:
     def __init__(self):
@@ -14,11 +13,16 @@ class Game:
         self.clock = pg.time.Clock()
         pass
 
+    def load_level(self):
+        for line in open('customlevel.py').readlines():
+            eval(line)
+
     def show_title_screen(self):
         pass
 
     def show_go_screen(self):
-        pass
+        del self.camera
+
 
     def new(self):
         self.all_sprites = pg.sprite.Group()
@@ -26,15 +30,9 @@ class Game:
         self.players = pg.sprite.Group()
         self.enemies = pg.sprite.Group()
 
-        self.player = Player(self, (WIDTH, 0))
-        Enemy(self, vec(WIDTH / 4, HEIGHT / 2), BASE_ENEMY_DETECT_RANGE, BASE_ENEMY_ATTACK_RANGE)
-
-        platform = Platform(0, HEIGHT - 100, WIDTH, 20)
-
+        self.load_level()
+        self.player = self.players.sprites()[0]
         self.camera = Camera()
-
-        self.all_sprites.add(platform)
-        self.platforms.add(platform)
         self.run()
 
     def run(self):
@@ -57,12 +55,6 @@ class Game:
     def update(self):
         self.all_sprites.update()
 
-    def load_img(self, name):
-        pass
-
-    def load_animation(self, name):
-        pass
-
     def render(self):
         self.screen.fill([0] * 3)
         self.camera.adjust(self.player)
@@ -77,6 +69,7 @@ class Game:
         pg.mixer.quit()
 
 
-game = Game()
-game.new()
-game.terminate()
+if __name__ == '__main__':
+    game = Game()
+    game.new()
+    game.terminate()
