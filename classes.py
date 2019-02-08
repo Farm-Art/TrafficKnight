@@ -31,7 +31,8 @@ class Entity(pg.sprite.Sprite):
         self.rect.midbottom = self.pos
 
     def manage_collisions(self):
-        collisions = pg.sprite.spritecollide(self, self.game.platforms, False)
+        collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
+                                             collided=pg.sprite.collide_mask)
         if collisions:
             top = max(collisions, key=lambda x: x.rect.top)
             if self.vel.y > 0:
@@ -43,10 +44,12 @@ class Entity(pg.sprite.Sprite):
     def is_midair(self):
         if self.rect is None:
             return False
-        self.rect.y += 1
-        answer = not pg.sprite.spritecollideany(self, self.game.platforms, False)
-        self.rect.y -= 1
-        return answer
+        feet = pg.sprite.Sprite()
+        feet.rect = pg.Rect(0, 0, self.rect.w // 2, 10)
+        feet.rect.midbottom = self.rect.midbottom
+        feet.rect.y += 1
+        return not pg.sprite.spritecollideany(feet, self.game.platforms, False)
+
 
     def jump(self):
         if not self.is_midair():
@@ -59,10 +62,18 @@ class Entity(pg.sprite.Sprite):
         self.frame += self.accumulator // FRAME_DUR
         self.accumulator %= FRAME_DUR
         self.frame %= len(self.animations[name])
-        self.image, self.mask = self.animations[name][self.frame]
+        if len(self.animations[name][self.frame]) == 1:
+            self.animations[name][self.frame][0] = self.animations[name][self.frame][0].convert()
+            self.animations[name][self.frame][0].set_colorkey((0, 0, 0))
+            self.image = self.animations[name][self.frame][0]
+            self.animations[name][self.frame] += [pg.mask.from_surface(self.image)]
+            self.mask = self.animations[name][self.frame][1]
+        else:
+            self.image, self.mask = self.animations[name][self.frame]
         if self.direction == 'left':
             self.image = pg.transform.flip(self.image, True, False)
-            self.mask = self.mask.scale((-self.image.get_width(), self.image.get_height()))
+            self.mask = pg.mask.from_surface(self.image)
+            # self.mask = self.mask.scale((-self.image.get_width(), self.image.get_height()))
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
@@ -196,7 +207,7 @@ class Platform(pg.sprite.Sprite):
             game.platforms.add(self)
             game.all_sprites.add(self)
         self.type = type
-        self.image = TILES[type]
+        self.image = TILES[type].convert_alpha()
         self.mask = pg.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
         self.rect.topleft = x, y

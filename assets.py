@@ -7,15 +7,9 @@ def load_animation(name, length, scale, animations):
     for i in range(1, length + 1):
         file = 'data/animations/' + name + '/' + (str(i) + '.png').rjust(8, '0')
         image = pg.transform.scale(pg.image.load(file), scale)
-        image.convert()
-        image.set_colorkey((0, 0, 0))
-        animations[key] += [(image, pg.mask.from_surface(image))]
-
-pg.display.init()
-pg.display.set_mode((0, 0))
+        animations[key] += [[image]]
 
 tileset = pg.image.load('data/images/static/tiles.png')
-
 
 PLAYER_ANIMATIONS = {}
 load_animation('player/run', 40, (192, 192), PLAYER_ANIMATIONS)
@@ -27,7 +21,6 @@ load_animation('cookieneg/run', 80, (160, 160), COOKIENEG_ANIMATIONS)
 load_animation('cookieneg/idle', 80, (160, 160), COOKIENEG_ANIMATIONS)
 load_animation('cookieneg/fall', 1, (160, 160), COOKIENEG_ANIMATIONS)
 load_animation('cookieneg/jump', 1, (160, 160), COOKIENEG_ANIMATIONS)
-pg.display.quit()
 
 grass = pg.Surface((16, 16))
 dirt = pg.Surface((16, 16))
