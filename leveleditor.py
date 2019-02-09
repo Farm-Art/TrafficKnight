@@ -69,6 +69,14 @@ class Board:
             for platform in platforms:
                 print(platform.get_init(), file=file)
 
+    def load_level(self):
+        try:
+            with open('data/levels/customlevel.py') as file:
+                for line in file:
+                    eval(line.replace('self', 'None'))
+        except FileNotFoundError:
+            pass
+
 
 pg.init()
 screen = pg.display.set_mode(SIZE)
@@ -117,6 +125,8 @@ while running:
                 camera.dy -= 64
             elif event.key == pg.K_s:
                 board.save_level()
+            elif event.key == pg.K_l:
+                board.load_level()
     keys = pg.key.get_pressed()
     if keys[pg.K_1]:
         current_tile = 'grass'

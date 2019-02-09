@@ -32,10 +32,6 @@ class Entity(pg.sprite.Sprite):
         self.rect.midbottom = self.pos
 
     def manage_collisions(self):
-        # feet = pg.sprite.Sprite()
-        # feet.rect = pg.Rect(0, 0, self.rect.w // 2, 50)
-        # feet.rect.midbottom = self.rect.midbottom
-
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
                                              pg.sprite.collide_mask)
         if collisions:
@@ -138,7 +134,7 @@ class Player(Entity):
                 self.acc.x = self.speed
         if keys[pg.K_SPACE]:
             if not self.is_midair():
-                self.jump()
+                self.vel.y = -PLAYER_JUMP_STR
         self.move()
         self.manage_collisions()
 
@@ -203,9 +199,11 @@ class Enemy(Entity):
         if self.player_in_range():
             distance = self.game.player.pos.x - self.pos.x
             if distance < 0:
-                self.acc.x = -self.speed
+                if not self.is_midair():
+                    self.acc.x = -self.speed
             else:
-                self.acc.x = self.speed
+                if not self.is_midair():
+                    self.acc.x = self.speed
         self.move()
         self.manage_collisions()
 
