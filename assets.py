@@ -54,4 +54,9 @@ TILES = {'grass': grass,
          'espawn': e_spawn,
          'finish': finish_pole}
 
+pg.mixer.init()
+JUMP_SND = pg.mixer.Sound('data/music/jump.ogg')
+JUMP_SND.set_volume(0.5)
+pg.mixer.quit()
+
 del grass, dirt, rock, wood, p_spawn, e_spawn, finish_pole

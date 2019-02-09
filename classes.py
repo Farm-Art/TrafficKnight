@@ -88,6 +88,7 @@ class Entity(pg.sprite.Sprite):
 
     def jump(self):
         if not self.is_midair():
+            JUMP_SND.play()
             self.vel.y = -PLAYER_JUMP_STR
 
     def animate(self, name):
