@@ -65,7 +65,7 @@ class Board:
         camera.dx, camera.dy = -camera.x, -camera.y
         for sprite in platforms:
             camera.apply(sprite)
-        with open('customlevel.py', mode='w') as file:
+        with open('data/levels/customlevel.py', mode='w') as file:
             for platform in platforms:
                 print(platform.get_init(), file=file)
 

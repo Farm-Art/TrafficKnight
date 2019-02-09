@@ -16,12 +16,12 @@ class Game:
 
     def load_level(self):
         try:
-            with open('level{}.py'.format(self.level)):
+            with open('data/levels/level{}.py'.format(self.level)):
                 pass
         except FileNotFoundError:
             self.terminate()
             return False
-        for line in open('level{}.py'.format(self.level)).readlines():
+        for line in open('data/levels/level{}.py'.format(self.level)).readlines():
             eval(line)
         return True
 
