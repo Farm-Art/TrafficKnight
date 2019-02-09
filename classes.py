@@ -59,14 +59,21 @@ class Entity(pg.sprite.Sprite):
                 if self.vel.x > 0:
                     brect = self.image.get_bounding_rect()
                     brect.midbottom = self.rect.midbottom
-                    brect.right = max(collisions, key=lambda x: x.rect.left).rect.left
-                    self.rect.midbottom = brect.midbottom
-                    self.pos = vec(self.rect.midbottom)
-                    self.vel.x = 0
+                    wall = max(collisions, key=lambda x: x.rect.left)
+                    if wall.rect.centerx > self.rect.centerx:
+                        brect.right = wall.rect.left
+                        self.rect.midbottom = brect.midbottom
+                        self.pos = vec(self.rect.midbottom)
+                        self.vel.x = 0
                 elif self.vel.x < 0:
-                    self.rect.left = max(collisions, key=lambda x: x.rect.right).rect.right
-                    self.pos = vec(self.rect.midbottom)
-                    self.vel.x = 0
+                    brect = self.image.get_bounding_rect()
+                    brect.midbottom = self.rect.midbottom
+                    wall = min(collisions, key=lambda x: x.rect.right)
+                    if wall.rect.centerx < self.rect.centerx:
+                        brect.left = wall.rect.right
+                        self.rect.midbottom = brect.midbottom
+                        self.pos = vec(self.rect.midbottom)
+                        self.vel.x = 0
 
 
     def is_midair(self):

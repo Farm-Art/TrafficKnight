@@ -9,6 +9,7 @@ class Game:
         pg.display.set_caption(TITLE)
 
         self.playing = False
+        self.ee = False
 
         self.clock = pg.time.Clock()
         self.level = 1
@@ -54,12 +55,36 @@ class Game:
     def show_go_screen(self):
         self.playing = False
         pg.mixer.music.stop()
+        death = pg.mixer.Sound('data/music/gameover.ogg')
+        death.play()
+        if self.ee:
+            image = pg.image.load('data/images/screen/gocs.png')
+        else:
+            image = pg.image.load('data/images/screens/go.png')
+        running = True
+        new = True
+        while running:
+            for event in pg.event.get():
+                if event.type == pg.QUIT:
+                    running = False
+                    new = False
+                    break
+                elif event.type == pg.KEYDOWN:
+                    running = False
+            self.screen.blit(image, (0, 0))
+            pg.display.flip()
+        if new:
+            self.new()
+        else:
+            self.terminate()
+
 
     def new(self):
         self.all_sprites = pg.sprite.Group()
         self.platforms = pg.sprite.Group()
         self.players = pg.sprite.Group()
         self.enemies = pg.sprite.Group()
+        self.finish = None
 
         if self.load_level():
             self.player = self.players.sprites()[0]
@@ -90,12 +115,13 @@ class Game:
 
     def update(self):
         self.all_sprites.update()
-        if pg.sprite.collide_mask(self.player, self.finish):
-            if self.show_win_screen():
-                self.level += 1
-                self.new()
-            else:
-                self.terminate()
+        if self.finish is not None:
+            if pg.sprite.collide_mask(self.player, self.finish):
+                if self.show_win_screen():
+                    self.level += 1
+                    self.new()
+                else:
+                    self.terminate()
 
 
     def show_win_screen(self):
@@ -105,15 +131,22 @@ class Game:
         snd.set_volume(0.5)
         snd.play()
 
+        if self.ee:
+            img = pg.image.load('data/images/screens/wincs.png')
+        else:
+            img = pg.image.load('data/images/screens/win.png')
+
         running = True
         while running:
             for event in pg.event.get():
                 if event.type == pg.QUIT:
-                    running = False
                     return
+                elif event.type == pg.KEYDOWN:
+                    return True
             self.screen.fill((0, 0, 0))
-            self.screen.blit(pg.image.load('data/images/screens/win.png'), (0, 0))
+            self.screen.blit(img, (0, 0))
             pg.display.flip()
+
 
     def render(self):
         self.screen.fill([0] * 3)

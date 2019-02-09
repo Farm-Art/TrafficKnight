@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d69ee-b502-408b-bd83-048fbc0bddb8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data/images/screens/start.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/screens/win.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/images/screens/wincs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/music/gameover.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/music/music.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/music/win.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/resources/sword.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/screens/go.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/screens/gocs.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customlevel.py" beforeDir="false" afterPath="$PROJECT_DIR$/level1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-323">
-              <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+            <state relative-caret-position="1469">
+              <caret line="122" column="21" lean-forward="true" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -35,35 +29,17 @@
       <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leveleditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="level1.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/level1.py">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sprite.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pygame/sprite.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="460" selection-start-line="460" selection-end-line="460" />
+            <state relative-caret-position="269">
+              <caret line="62" column="61" lean-forward="true" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -75,11 +51,6 @@
               <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finish.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/images/static/finish.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
@@ -105,6 +76,8 @@
       <find>midbottom</find>
       <find>bottomleft</find>
       <find>self.rect</find>
+      <find>self.level</find>
+      <find />
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -204,7 +177,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.leveleditor">
     <configuration name="assets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TrafficKnight" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -285,8 +258,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.leveleditor" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.assets" />
         <item itemvalue="Python.classes" />
       </list>
@@ -415,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549700413396</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="introduce title and win screen, easter egg">
+      <created>1549707241224</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1549707241225</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -472,7 +452,8 @@
     <MESSAGE value="implement mask collision check" />
     <MESSAGE value="add wall collisions, fix run jitter, add missing animations" />
     <MESSAGE value="add finish" />
-    <option name="LAST_COMMIT_MESSAGE" value="add finish" />
+    <MESSAGE value="introduce title and win screen, easter egg" />
+    <option name="LAST_COMMIT_MESSAGE" value="introduce title and win screen, easter egg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,7 +464,7 @@
           <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="37" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -827,22 +808,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/leveleditor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/classes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="104" column="35" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-323">
-          <caret line="38" column="61" lean-forward="true" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
+        <state relative-caret-position="1469">
+          <caret line="122" column="21" lean-forward="true" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="62" column="61" lean-forward="true" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
         </state>
       </provider>
     </entry>
