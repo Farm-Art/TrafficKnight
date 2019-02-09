@@ -98,7 +98,11 @@ class Entity(pg.sprite.Sprite):
             self.mask = self.animations[name][self.frame][1]
         else:
             self.image, self.mask = self.animations[name][self.frame]
-        if self.direction == 'left':
+        if self.game.ee:
+            invert = 'right'
+        else:
+            invert = 'left'
+        if self.direction == invert:
             self.image = pg.transform.flip(self.image, True, False)
             self.mask = pg.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
