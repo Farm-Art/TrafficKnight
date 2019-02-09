@@ -80,7 +80,7 @@ class Entity(pg.sprite.Sprite):
         if self.rect is None:
             return False
         feet = pg.sprite.Sprite()
-        feet.rect = pg.Rect(0, 0, self.rect.w // 2, 10)
+        feet.rect = pg.Rect(0, 0, self.rect.w // 1.75, 10)
         feet.rect.midbottom = self.rect.midbottom
         feet.rect.y += 1
         return not pg.sprite.spritecollideany(feet, self.game.platforms, False)
