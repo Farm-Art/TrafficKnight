@@ -130,6 +130,8 @@ while running:
         current_tile = 'pspawn'
     elif keys[pg.K_6]:
         current_tile = 'espawn'
+    elif keys[pg.K_7]:
+        current_tile = 'finish'
     for sprite in platforms:
         camera.apply(sprite)
     camera.dx, camera.dy = 0, 0

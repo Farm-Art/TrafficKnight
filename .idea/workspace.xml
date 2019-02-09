@@ -2,50 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a22d69ee-b502-408b-bd83-048fbc0bddb8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/data/animations/cookieneg/fall/0001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/animations/cookieneg/jump/0001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/images/static/finish.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0001.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0001.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0002.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0002.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0003.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0003.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0004.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0004.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0005.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0005.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0006.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0006.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0007.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0007.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0008.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0008.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0009.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0009.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0010.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0010.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0011.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0011.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0012.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0013.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0013.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0014.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0014.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0015.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0015.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0016.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0016.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0017.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0017.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0018.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0018.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0019.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0019.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0020.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0020.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0021.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0021.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0022.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0022.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0023.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0023.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0024.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0024.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0025.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0025.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0026.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0026.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0027.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0027.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0028.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0028.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0029.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0029.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0030.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0030.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0031.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0031.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0032.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0032.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0033.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0033.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0034.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0034.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0035.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0035.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0036.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0036.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0037.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0037.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0038.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0038.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0039.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0039.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/animations/player/run/0040.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/animations/player/run/0040.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customlevel.py" beforeDir="false" afterPath="$PROJECT_DIR$/customlevel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leveleditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/leveleditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+            <state relative-caret-position="428">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
@@ -68,8 +32,8 @@
       <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leveleditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+            <state relative-caret-position="-1132">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -77,17 +41,26 @@
       <file leaf-file-name="customlevel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customlevel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="13" />
+            <state relative-caret-position="255">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classes.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+            <state relative-caret-position="160">
+              <caret line="235" selection-start-line="235" selection-end-line="235" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sprite.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pygame/sprite.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="460" selection-start-line="460" selection-end-line="460" />
             </state>
           </provider>
         </entry>
@@ -95,17 +68,22 @@
       <file leaf-file-name="assets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+            <state relative-caret-position="296">
+              <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="finish.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/images/static/finish.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,10 +113,10 @@
         <option value="$PROJECT_DIR$/data/images/static/leveleditor.py" />
         <option value="$PROJECT_DIR$/customlevel.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/leveleditor.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/assets.py" />
+        <option value="$PROJECT_DIR$/leveleditor.py" />
         <option value="$PROJECT_DIR$/classes.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -164,6 +142,31 @@
               <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="animations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -274,9 +277,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.classes" />
         <item itemvalue="Python.leveleditor" />
         <item itemvalue="Python.assets" />
+        <item itemvalue="Python.classes" />
       </list>
     </recent_temporary>
   </component>
@@ -389,22 +392,30 @@
       <option name="project" value="LOCAL" />
       <updated>1549657820679</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add wall collisions, fix run jitter, add missing animations">
+      <created>1549664336483</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549664336483</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -443,23 +454,19 @@
     <MESSAGE value="introduce level editor, level loading" />
     <MESSAGE value="fix falling through walls in corners" />
     <MESSAGE value="implement mask collision check" />
-    <option name="LAST_COMMIT_MESSAGE" value="implement mask collision check" />
+    <MESSAGE value="add wall collisions, fix run jitter, add missing animations" />
+    <option name="LAST_COMMIT_MESSAGE" value="add wall collisions, fix run jitter, add missing animations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/leveleditor.py</url>
-          <line>139</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/classes.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="26" />
+          <line>42</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="27" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -469,6 +476,41 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/leveleditor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customlevel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -735,52 +777,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/images/static/finish.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/customlevel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="72" column="17" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pygame/sprite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4604">
-          <caret line="1508" column="39" lean-forward="true" selection-start-line="1508" selection-start-column="39" selection-end-line="1508" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/leveleditor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="67" column="54" selection-start-line="67" selection-start-column="54" selection-end-line="67" selection-end-column="54" />
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
+        <state relative-caret-position="296">
+          <caret line="46" column="56" lean-forward="true" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/pygame/sprite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+        <state relative-caret-position="150">
+          <caret line="460" selection-start-line="460" selection-end-line="460" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/leveleditor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1132">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+        <state relative-caret-position="160">
+          <caret line="235" selection-start-line="235" selection-end-line="235" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>

@@ -43,11 +43,15 @@ p_spawn.fill((255, 0, 0))
 e_spawn = pg.Surface((64, 64))
 e_spawn.fill((0, 255, 0))
 
+finish_pole = pg.image.load('data/images/static/finish.png')
+finish_pole = pg.transform.scale(finish_pole, (64, 164))
+
 TILES = {'grass': grass,
          'dirt': dirt,
          'rock': rock,
          'wood': wood,
          'pspawn': p_spawn,
-         'espawn': e_spawn}
+         'espawn': e_spawn,
+         'finish': finish_pole}
 
-del grass, dirt, rock, wood, p_spawn, e_spawn
+del grass, dirt, rock, wood, p_spawn, e_spawn, finish_pole

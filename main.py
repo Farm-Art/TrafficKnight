@@ -54,6 +54,11 @@ class Game:
 
     def update(self):
         self.all_sprites.update()
+        if pg.sprite.collide_mask(self.player, self.finish):
+            self.show_win_screen()
+
+    def show_win_screen(self):
+        pass
 
     def render(self):
         self.screen.fill([0] * 3)

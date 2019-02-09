@@ -2,6 +2,7 @@ from assets import *
 from settings import *
 vec = pg.math.Vector2
 
+
 class Entity(pg.sprite.Sprite):
     def __init__(self, game, x, y, health, damage, speed):
         super().__init__(game.all_sprites)
@@ -31,28 +32,41 @@ class Entity(pg.sprite.Sprite):
         self.rect.midbottom = self.pos
 
     def manage_collisions(self):
+        # feet = pg.sprite.Sprite()
+        # feet.rect = pg.Rect(0, 0, self.rect.w // 2, 50)
+        # feet.rect.midbottom = self.rect.midbottom
+
         collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
                                              pg.sprite.collide_mask)
         if collisions:
-            top = max(collisions, key=lambda x: x.rect.top)
+            if any(i.type == 'wood' for i in collisions):
+                pass
             if self.vel.y > 0:
-                if self.rect.centery < top.rect.top:
+                top = max(collisions, key=lambda x: x.rect.top)
+                if self.rect.centery <= top.rect.top:
                     self.pos.y = top.rect.top
                     self.rect.midbottom = self.pos
+                    self.vel.y = 0
+            elif self.vel.y < 0:
+                top = min(collisions, key=lambda x: x.rect.top)
+                if self.rect.top > top.rect.top:
+                    self.rect.top = top.rect.bottom
+                    self.pos = vec(self.rect.midbottom)
                     self.vel.y = 0
             collisions = pg.sprite.spritecollide(self, self.game.platforms, False,
                                                  pg.sprite.collide_mask)
             if collisions:
-                if self.vel.y <= 0:
-                    if self.vel.x > 0:
-                        collisions = filter(lambda x: x.rect.centery > self.rect.top, collisions)
-                        self.rect.right = max(collisions, key=lambda x: x.rect.left).rect.left
-                        self.pos = vec(self.rect.midbottom)
-                        self.vel.x = 0
-                    elif self.vel.x < 0:
-                        self.rect.left = max(collisions, key=lambda x: x.rect.right).rect.right
-                        self.pos = vec(self.rect.midbottom)
-                        self.vel.x = 0
+                if self.vel.x > 0:
+                    brect = self.image.get_bounding_rect()
+                    brect.midbottom = self.rect.midbottom
+                    brect.right = max(collisions, key=lambda x: x.rect.left).rect.left
+                    self.rect.midbottom = brect.midbottom
+                    self.pos = vec(self.rect.midbottom)
+                    self.vel.x = 0
+                elif self.vel.x < 0:
+                    self.rect.left = max(collisions, key=lambda x: x.rect.right).rect.right
+                    self.pos = vec(self.rect.midbottom)
+                    self.vel.x = 0
 
 
     def is_midair(self):
@@ -163,7 +177,7 @@ class Enemy(Entity):
         self.animations = COOKIENEG_ANIMATIONS
 
         self.image = self.animations['idle'][0][0]
-        self.mask = self.animations['idle'][0][1]
+        self.mask = pg.mask.from_surface(self.animations['idle'][0][0])
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
@@ -216,14 +230,20 @@ class Enemy(Entity):
 class Platform(pg.sprite.Sprite):
     def __init__(self, game, x, y, type):
         super().__init__()
-        if game is not None:
-            game.platforms.add(self)
-            game.all_sprites.add(self)
         self.type = type
+        if game is not None:
+            if type == 'finish':
+                game.finish = self
+            else:
+                game.platforms.add(self)
+            game.all_sprites.add(self)
         self.image = TILES[type].convert_alpha()
         self.mask = pg.mask.from_surface(self.image)
         self.rect = self.image.get_rect()
-        self.rect.topleft = x, y
+        if game is None and type == 'finish':
+            self.rect.midbottom = x + 32, y + 64
+        else:
+            self.rect.topleft = x, y
 
     def get_init(self):
         if self.type == 'pspawn':
