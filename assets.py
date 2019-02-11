@@ -10,6 +10,11 @@ def load_animation(name, length, scale, animations):
         animations[key] += [[image]]
 
 tileset = pg.image.load('data/images/static/tiles.png')
+SPLASH_SCREEN = pg.image.load('data/images/screens/start.png')
+GAMEOVER_IMG = pg.image.load('data/images/screens/go.png')
+GAMEOVER_CS = pg.image.load('data/images/screen/gocs.png')
+WIN_IMG = pg.image.load('data/images/screens/win.png')
+WIN_CS = pg.image.load('data/images/screens/wincs.png')
 
 PLAYER_ANIMATIONS = {}
 load_animation('player/run', 40, (192, 192), PLAYER_ANIMATIONS)
@@ -57,6 +62,9 @@ TILES = {'grass': grass,
 pg.mixer.init()
 JUMP_SND = pg.mixer.Sound('data/music/jump.ogg')
 JUMP_SND.set_volume(0.5)
+GO_SND = pg.mixer.Sound('data/music/gameover.ogg')
+WIN_SND = pg.mixer.Sound('data/music/win.ogg')
+WIN_SND.set_volume(0.5)
 pg.mixer.quit()
 
 del grass, dirt, rock, wood, p_spawn, e_spawn, finish_pole

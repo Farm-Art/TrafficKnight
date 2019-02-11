@@ -71,22 +71,6 @@ class Entity(pg.sprite.Sprite):
                         self.pos = vec(self.rect.midbottom)
                         self.vel.x = 0
 
-
-    def is_midair(self):
-        if self.rect is None:
-            return False
-        feet = pg.sprite.Sprite()
-        feet.rect = pg.Rect(0, 0, self.rect.w // 1.75, 10)
-        feet.rect.midbottom = self.rect.midbottom
-        feet.rect.y += 1
-        return not pg.sprite.spritecollideany(feet, self.game.platforms, False)
-
-
-    def jump(self):
-        if not self.is_midair():
-            JUMP_SND.play()
-            self.vel.y = -PLAYER_JUMP_STR
-
     def animate(self, name):
         if self.prev_anim != name:
             self.prev_anim = name
@@ -112,6 +96,20 @@ class Entity(pg.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.pos
 
+    def jump(self):
+        if not self.is_midair():
+            JUMP_SND.play()
+            self.vel.y = -PLAYER_JUMP_STR
+
+    def is_midair(self):
+        if self.rect is None:
+            return False
+        feet = pg.sprite.Sprite()
+        feet.rect = pg.Rect(0, 0, self.rect.w // 1.75, 10)
+        feet.rect.midbottom = self.rect.midbottom
+        feet.rect.y += 1
+        return not pg.sprite.spritecollideany(feet, self.game.platforms, False)
+
 
 class Player(Entity):
     def __init__(self, game, x, y):
@@ -121,6 +119,32 @@ class Player(Entity):
         self.animations = PLAYER_ANIMATIONS
 
         self.rect = None
+
+    def manage_collisions(self):
+        super().manage_collisions()
+        collision = pg.sprite.spritecollideany(self, self.game.enemies)
+        if collision:
+            if self.vel.y > 0 and self.rect.bottom < collision.rect.centery:
+                collision.kill()
+                self.vel.y = -PLAYER_JUMP_STR
+            else:
+                self.take_damage(collision)
+
+    def manage_animations(self):
+        if self.vel.x > 0:
+            self.direction = 'right'
+        elif self.vel.x < 0:
+            self.direction = 'left'
+        self.accumulator += self.game.dt
+        if not self.is_midair():
+            if abs(self.vel.x) <= IDLE_ACC_MARGIN:
+                self.animate('idle')
+            elif self.vel.x != 0:
+                self.animate('run')
+        elif self.vel.y < 0:
+            self.animate('jump')
+        elif self.vel.y > 0:
+            self.animate('fall')
 
     def update(self):
         self.manage_animations()
@@ -138,38 +162,12 @@ class Player(Entity):
         self.move()
         self.manage_collisions()
 
-    def manage_collisions(self):
-        super().manage_collisions()
-        collision = pg.sprite.spritecollideany(self, self.game.enemies)
-        if collision:
-            if self.vel.y > 0 and self.rect.bottom < collision.rect.centery:
-                collision.kill()
-                self.vel.y = -PLAYER_JUMP_STR
-            else:
-                self.take_damage(collision)
-
     def take_damage(self, enemy):
         self.health = max(0, self.health - enemy.damage)
         if self.health == 0:
             self.die()
         else:
             self.vel.x = KNOCKBACK if self.pos.x > enemy.pos.x else -KNOCKBACK
-
-    def manage_animations(self):
-        if self.vel.x > 0:
-            self.direction = 'right'
-        elif self.vel.x < 0:
-            self.direction = 'left'
-        self.accumulator += self.game.dt
-        if not self.is_midair():
-            if abs(self.vel.x) <= IDLE_ACC_MARGIN:
-                self.animate('idle')
-            elif self.vel.x != 0:
-                self.animate('run')
-        elif self.vel.y < 0:
-            self.animate('jump')
-        elif self.vel.y > 0:
-            self.animate('fall')
 
     def die(self):
         self.kill()
@@ -207,19 +205,6 @@ class Enemy(Entity):
         self.move()
         self.manage_collisions()
 
-    def player_in_range(self):
-        px, py = self.game.player.pos.x, self.game.player.pos.y
-        sx, sy = self.pos.x, self.pos.y
-        return (px - sx) ** 2 + (py - sy) ** 2 <= self.range ** 2
-
-    def player_in_attack_range(self):
-        px, py = self.game.player.pos.x, self.game.player.pos.y
-        sx, sy = self.pos.x, self.pos.y
-        distance = ((px - sx) ** 2 + (py - sy) ** 2) ** 0.5
-        if self.attack_range - ATTACK_MARGIN <= distance <= self.attack_range + ATTACK_MARGIN:
-            return True
-        return False
-
     def manage_animations(self):
         if self.vel.x > 0:
             self.direction = 'right'
@@ -235,6 +220,19 @@ class Enemy(Entity):
             self.animate('jump')
         elif self.vel.y > 0:
             self.animate('fall')
+
+    def player_in_range(self):
+        px, py = self.game.player.pos.x, self.game.player.pos.y
+        sx, sy = self.pos.x, self.pos.y
+        return (px - sx) ** 2 + (py - sy) ** 2 <= self.range ** 2
+
+    def player_in_attack_range(self):
+        px, py = self.game.player.pos.x, self.game.player.pos.y
+        sx, sy = self.pos.x, self.pos.y
+        distance = ((px - sx) ** 2 + (py - sy) ** 2) ** 0.5
+        if self.attack_range - ATTACK_MARGIN <= distance <= self.attack_range + ATTACK_MARGIN:
+            return True
+        return False
 
 
 class Platform(pg.sprite.Sprite):
