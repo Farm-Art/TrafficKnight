@@ -5,7 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leveleditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/leveleditor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,41 +17,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="233" column="26" lean-forward="true" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
+            <state relative-caret-position="449">
+              <caret line="233" column="26" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
               <folding>
                 <element signature="e#98#515#0" />
                 <element signature="e#551#1096#0" />
                 <element signature="e#1139#2448#0" />
                 <element signature="e#2488#3583#0" />
-                <element signature="e#3612#4434#0" />
-                <element signature="e#4463#4921#0" />
-                <element signature="e#4953#5075#0" />
-                <element signature="e#5121#5569#0" />
-                <element signature="e#5626#6296#0" />
+                <element signature="e#3612#4414#0" />
+                <element signature="e#4443#4899#0" />
+                <element signature="e#4931#5053#0" />
+                <element signature="e#5085#5585#0" />
+                <element signature="e#5626#6447#0" />
+                <element signature="e#6479#6840#0" />
+                <element signature="e#6875#6985#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/leveleditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-826">
-              <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
-              <folding>
-                <element signature="e#81#430#0" />
-                <element signature="e#486#560#0" />
-                <element signature="e#592#875#0" />
-                <element signature="e#915#1605#0" />
-                <element signature="e#1644#1917#0" />
-                <element signature="e#1958#2229#0" />
-                <element signature="e#2265#2534#0" />
-                <element signature="e#2570#2775#0" />
-              </folding>
+            <state relative-caret-position="3145">
+              <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -58,8 +51,8 @@
       <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="207" column="4" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="4" />
+            <state relative-caret-position="925">
+              <caret line="270" column="25" lean-forward="true" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
               <folding>
                 <element signature="e#167#547#0" />
                 <element signature="e#577#764#0" />
@@ -67,22 +60,13 @@
                 <element signature="e#2839#3922#0" />
                 <element signature="e#3952#4046#0" />
                 <element signature="e#4081#4375#0" />
-                <element signature="e#4446#4607#0" />
                 <element signature="e#4648#4987#0" />
                 <element signature="e#5030#5506#0" />
                 <element signature="e#5538#6010#0" />
                 <element signature="e#6054#6247#0" />
-                <element signature="e#6278#6324#0" />
-                <element signature="e#6492#6896#0" />
-                <element signature="e#6928#7352#0" />
                 <element signature="e#7393#7869#0" />
                 <element signature="e#7910#8071#0" />
                 <element signature="e#8119#8414#0" />
-                <element signature="e#8503#9031#0" />
-                <element signature="e#9065#9359#0" />
-                <element signature="e#9408#9453#0" />
-                <element signature="e#9493#9645#0" />
-                <element signature="e#9684#9852#0" />
               </folding>
             </state>
           </provider>
@@ -91,8 +75,8 @@
       <file leaf-file-name="assets.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="153">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -100,8 +84,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            <state relative-caret-position="51">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -123,6 +107,7 @@
       <find>self.level</find>
       <find>self.level +=</find>
       <find>level</find>
+      <find>64</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,11 +118,11 @@
       <list>
         <option value="$PROJECT_DIR$/data/images/static/leveleditor.py" />
         <option value="$PROJECT_DIR$/customlevel.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/assets.py" />
+        <option value="$PROJECT_DIR$/classes.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/leveleditor.py" />
-        <option value="$PROJECT_DIR$/classes.py" />
-        <option value="$PROJECT_DIR$/assets.py" />
-        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -151,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,11 +144,21 @@
               <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
               <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TrafficKnight" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TrafficKnight" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -187,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.leveleditor">
     <configuration name="assets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TrafficKnight" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -268,8 +264,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
         <item itemvalue="Python.leveleditor" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.assets" />
         <item itemvalue="Python.classes" />
       </list>
@@ -447,21 +443,28 @@
       <option name="project" value="LOCAL" />
       <updated>1549720045435</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="improve code readability and consistency, add comments to main.py">
+      <created>1549908729973</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1549908729973</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947312" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978212" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -511,23 +514,19 @@
     <MESSAGE value="add 3 levels, add load to editor" />
     <MESSAGE value="move levels to data/levels" />
     <MESSAGE value="add presentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="add presentation" />
+    <MESSAGE value="improve code readability and consistency, add comments to main.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve code readability and consistency, add comments to main.py" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/leveleditor.py</url>
-          <line>32</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/classes.py</url>
           <line>238</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -859,27 +858,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leveleditor.py">
+    <entry file="file://$PROJECT_DIR$/assets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-826">
-          <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="25" />
+        <state relative-caret-position="153">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="233" column="26" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
           <folding>
-            <element signature="e#81#430#0" />
-            <element signature="e#486#560#0" />
-            <element signature="e#592#875#0" />
-            <element signature="e#915#1605#0" />
-            <element signature="e#1644#1917#0" />
-            <element signature="e#1958#2229#0" />
-            <element signature="e#2265#2534#0" />
-            <element signature="e#2570#2775#0" />
+            <element signature="e#98#515#0" />
+            <element signature="e#551#1096#0" />
+            <element signature="e#1139#2448#0" />
+            <element signature="e#2488#3583#0" />
+            <element signature="e#3612#4414#0" />
+            <element signature="e#4443#4899#0" />
+            <element signature="e#4931#5053#0" />
+            <element signature="e#5085#5585#0" />
+            <element signature="e#5626#6447#0" />
+            <element signature="e#6479#6840#0" />
+            <element signature="e#6875#6985#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="207" column="4" selection-start-line="207" selection-start-column="4" selection-end-line="207" selection-end-column="4" />
+        <state relative-caret-position="925">
+          <caret line="270" column="25" lean-forward="true" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
           <folding>
             <element signature="e#167#547#0" />
             <element signature="e#577#764#0" />
@@ -887,55 +903,21 @@
             <element signature="e#2839#3922#0" />
             <element signature="e#3952#4046#0" />
             <element signature="e#4081#4375#0" />
-            <element signature="e#4446#4607#0" />
             <element signature="e#4648#4987#0" />
             <element signature="e#5030#5506#0" />
             <element signature="e#5538#6010#0" />
             <element signature="e#6054#6247#0" />
-            <element signature="e#6278#6324#0" />
-            <element signature="e#6492#6896#0" />
-            <element signature="e#6928#7352#0" />
             <element signature="e#7393#7869#0" />
             <element signature="e#7910#8071#0" />
             <element signature="e#8119#8414#0" />
-            <element signature="e#8503#9031#0" />
-            <element signature="e#9065#9359#0" />
-            <element signature="e#9408#9453#0" />
-            <element signature="e#9493#9645#0" />
-            <element signature="e#9684#9852#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/leveleditor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="233" column="26" lean-forward="true" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
-          <folding>
-            <element signature="e#98#515#0" />
-            <element signature="e#551#1096#0" />
-            <element signature="e#1139#2448#0" />
-            <element signature="e#2488#3583#0" />
-            <element signature="e#3612#4434#0" />
-            <element signature="e#4463#4921#0" />
-            <element signature="e#4953#5075#0" />
-            <element signature="e#5121#5569#0" />
-            <element signature="e#5626#6296#0" />
-          </folding>
+        <state relative-caret-position="3145">
+          <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
         </state>
       </provider>
     </entry>

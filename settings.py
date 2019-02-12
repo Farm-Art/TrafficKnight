@@ -1,6 +1,7 @@
 TITLE = 'Остановитязь'
 
 SIZE = WIDTH, HEIGHT = 1280, 720
+TILE_SIZE = 64
 
 FPS = 60
 FRAME_DUR = 1000 // FPS

@@ -268,8 +268,8 @@ class Camera:
     def adjust(self, target):
         self.dx = -(target.rect.centerx - WIDTH // 2)
         self.dy = -(target.rect.centery - HEIGHT // 2)
-        self.x += self.dx
-        self.y += self.dy
+        self.x -= self.dx
+        self.y -= self.dy
 
     def apply(self, object):
         if isinstance(object, Entity):

@@ -12,7 +12,7 @@ def load_animation(name, length, scale, animations):
 tileset = pg.image.load('data/images/static/tiles.png')
 SPLASH_SCREEN = pg.image.load('data/images/screens/start.png')
 GAMEOVER_IMG = pg.image.load('data/images/screens/go.png')
-GAMEOVER_CS = pg.image.load('data/images/screen/gocs.png')
+GAMEOVER_CS = pg.image.load('data/images/screens/gocs.png')
 WIN_IMG = pg.image.load('data/images/screens/win.png')
 WIN_CS = pg.image.load('data/images/screens/wincs.png')
 
