@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a22d69ee-b502-408b-bd83-048fbc0bddb8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets.py" beforeDir="false" afterPath="$PROJECT_DIR$/assets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leveleditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/leveleditor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,18 +18,16 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="233" column="26" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
+            <state relative-caret-position="322">
+              <caret line="153" column="76" selection-start-line="153" selection-start-column="76" selection-end-line="153" selection-end-column="76" />
               <folding>
                 <element signature="e#98#515#0" />
                 <element signature="e#551#1096#0" />
                 <element signature="e#1139#2448#0" />
                 <element signature="e#2488#3583#0" />
                 <element signature="e#3612#4414#0" />
-                <element signature="e#4443#4899#0" />
                 <element signature="e#4931#5053#0" />
                 <element signature="e#5085#5585#0" />
-                <element signature="e#5626#6447#0" />
                 <element signature="e#6479#6840#0" />
                 <element signature="e#6875#6985#0" />
               </folding>
@@ -39,31 +35,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="leveleditor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/leveleditor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3145">
-              <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+            <state>
+              <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classes.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="classes.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="925">
-              <caret line="270" column="25" lean-forward="true" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
+            <state relative-caret-position="-112">
+              <caret line="264" column="26" selection-start-line="264" selection-start-column="26" selection-end-line="264" selection-end-column="26" />
               <folding>
-                <element signature="e#167#547#0" />
-                <element signature="e#577#764#0" />
-                <element signature="e#807#2800#0" />
-                <element signature="e#2839#3922#0" />
-                <element signature="e#3952#4046#0" />
-                <element signature="e#4081#4375#0" />
-                <element signature="e#4648#4987#0" />
-                <element signature="e#5030#5506#0" />
-                <element signature="e#5538#6010#0" />
-                <element signature="e#6054#6247#0" />
+                <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#6490#6894#0" />
+                <element signature="e#6926#7350#0" />
                 <element signature="e#7393#7869#0" />
                 <element signature="e#7910#8071#0" />
                 <element signature="e#8119#8414#0" />
@@ -108,6 +97,7 @@
       <find>self.level +=</find>
       <find>level</find>
       <find>64</find>
+      <find>ra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -118,11 +108,11 @@
       <list>
         <option value="$PROJECT_DIR$/data/images/static/leveleditor.py" />
         <option value="$PROJECT_DIR$/customlevel.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/assets.py" />
-        <option value="$PROJECT_DIR$/classes.py" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/leveleditor.py" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/classes.py" />
       </list>
     </option>
   </component>
@@ -183,7 +173,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.leveleditor">
+  <component name="RunManager" selected="Python.main">
     <configuration name="assets" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="TrafficKnight" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -264,8 +254,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.leveleditor" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.leveleditor" />
         <item itemvalue="Python.assets" />
         <item itemvalue="Python.classes" />
       </list>
@@ -450,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1549908729973</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Add comments to leveleditor.py, introduce TILE_SIZE const">
+      <created>1549985732825</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1549985732825</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -461,7 +458,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50052685" side_tool="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
-      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Python Console" order="7" weight="0.32897604" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49947312" visible="true" weight="0.32897604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
@@ -515,18 +512,19 @@
     <MESSAGE value="move levels to data/levels" />
     <MESSAGE value="add presentation" />
     <MESSAGE value="improve code readability and consistency, add comments to main.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="improve code readability and consistency, add comments to main.py" />
+    <MESSAGE value="Add comments to leveleditor.py, introduce TILE_SIZE const" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add comments to leveleditor.py, introduce TILE_SIZE const" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/classes.py</url>
-          <line>238</line>
-          <option name="timeStamp" value="46" />
+          <line>272</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="52" />
+      <option name="time" value="56" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -865,26 +863,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="233" column="26" selection-start-line="233" selection-start-column="26" selection-end-line="233" selection-end-column="26" />
-          <folding>
-            <element signature="e#98#515#0" />
-            <element signature="e#551#1096#0" />
-            <element signature="e#1139#2448#0" />
-            <element signature="e#2488#3583#0" />
-            <element signature="e#3612#4414#0" />
-            <element signature="e#4443#4899#0" />
-            <element signature="e#4931#5053#0" />
-            <element signature="e#5085#5585#0" />
-            <element signature="e#5626#6447#0" />
-            <element signature="e#6479#6840#0" />
-            <element signature="e#6875#6985#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -892,32 +870,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classes.py">
+    <entry file="file://$PROJECT_DIR$/leveleditor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="925">
-          <caret line="270" column="25" lean-forward="true" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
+        <state>
+          <caret line="102" column="15" lean-forward="true" selection-start-line="102" selection-start-column="15" selection-end-line="102" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="153" column="76" selection-start-line="153" selection-start-column="76" selection-end-line="153" selection-end-column="76" />
           <folding>
-            <element signature="e#167#547#0" />
-            <element signature="e#577#764#0" />
-            <element signature="e#807#2800#0" />
-            <element signature="e#2839#3922#0" />
-            <element signature="e#3952#4046#0" />
-            <element signature="e#4081#4375#0" />
-            <element signature="e#4648#4987#0" />
-            <element signature="e#5030#5506#0" />
-            <element signature="e#5538#6010#0" />
-            <element signature="e#6054#6247#0" />
-            <element signature="e#7393#7869#0" />
-            <element signature="e#7910#8071#0" />
-            <element signature="e#8119#8414#0" />
+            <element signature="e#98#515#0" />
+            <element signature="e#551#1096#0" />
+            <element signature="e#1139#2448#0" />
+            <element signature="e#2488#3583#0" />
+            <element signature="e#3612#4414#0" />
+            <element signature="e#4931#5053#0" />
+            <element signature="e#5085#5585#0" />
+            <element signature="e#6479#6840#0" />
+            <element signature="e#6875#6985#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/leveleditor.py">
+    <entry file="file://$PROJECT_DIR$/classes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="9" lean-forward="true" selection-start-line="185" selection-start-column="9" selection-end-line="185" selection-end-column="9" />
+        <state relative-caret-position="-112">
+          <caret line="264" column="26" selection-start-line="264" selection-start-column="26" selection-end-line="264" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#6490#6894#0" />
+            <element signature="e#6926#7350#0" />
+            <element signature="e#7393#7869#0" />
+            <element signature="e#7910#8071#0" />
+            <element signature="e#8119#8414#0" />
+          </folding>
         </state>
       </provider>
     </entry>

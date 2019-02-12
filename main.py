@@ -151,11 +151,14 @@ class Game:
         while self.playing:
             self.dt = self.clock.tick(FPS)
             self.update()
-            if self.playing:
+            # Try-except introduced to prevent errors when quitting properly
+            try:
                 # Manage events (currently only checks for game termination)
                 self.events()
                 # Render and flip frame
                 self.render()
+            except Exception:
+                pass
 
     def events(self):
         for event in pg.event.get():
