@@ -285,8 +285,12 @@ class Enemy(Entity):
         self.range = range
 
     def update(self):
+        # Manage animations first to update image
         self.manage_animations()
+
         self.acc = vec(0, GRAVITY)
+
+        # If player is detected, move towards player
         if self.player_in_range():
             distance = self.game.player.pos.x - self.pos.x
             if distance < 0:
@@ -295,15 +299,22 @@ class Enemy(Entity):
             else:
                 if not self.is_midair():
                     self.acc.x = self.speed
+        # Move self
         self.move()
+        # Manage collisions
         self.manage_collisions()
 
     def manage_animations(self):
+        # Get direction
         if self.vel.x > 0:
             self.direction = 'right'
         elif self.vel.x < 0:
             self.direction = 'left'
+
+        # Update accumulator
         self.accumulator += self.game.dt
+
+        # Apply according animation
         if not self.is_midair():
             if abs(self.vel.x) <= IDLE_ACC_MARGIN:
                 self.animate('idle')
@@ -315,11 +326,13 @@ class Enemy(Entity):
             self.animate('fall')
 
     def player_in_range(self):
+        # Return True if player is within detection range
         px, py = self.game.player.pos.x, self.game.player.pos.y
         sx, sy = self.pos.x, self.pos.y
         return (px - sx) ** 2 + (py - sy) ** 2 <= self.range ** 2
 
     def player_in_attack_range(self):
+        # Return True if player is within attack range (currently unused)
         px, py = self.game.player.pos.x, self.game.player.pos.y
         sx, sy = self.pos.x, self.pos.y
         distance = ((px - sx) ** 2 + (py - sy) ** 2) ** 0.5
@@ -332,21 +345,30 @@ class Platform(pg.sprite.Sprite):
     def __init__(self, game, x, y, type):
         super().__init__()
         self.type = type
+        # If game is None, we assume we're in the level editor
         if game is not None:
             if type == 'finish':
+                # Assign finish point to the game
                 game.finish = self
             else:
                 game.platforms.add(self)
             game.all_sprites.add(self)
+
+        # Set image and mask
         self.image = TILES[type].convert_alpha()
         self.mask = pg.mask.from_surface(self.image)
+
+        # Set rect
         self.rect = self.image.get_rect()
+
+        # Alignment shift in level editor for finish tile
         if game is None and type == 'finish':
-            self.rect.midbottom = x + 32, y + 64
+            self.rect.midbottom = x + TILE_SIZE // 2, y + TILE_SIZE
         else:
             self.rect.topleft = x, y
 
     def get_init(self):
+        # Return init line for level save purposes
         if self.type == 'pspawn':
             return 'Player(self, {}, {})'.format(*self.rect.midbottom)
         elif self.type == 'espawn':
