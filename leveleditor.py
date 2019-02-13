@@ -1,6 +1,14 @@
 from main import *
 
 
+# ----- U S E R   M A N U A L -----
+# LMB to draw current tiles
+# RMB to erase drawn tiles
+# 1-7 to select tiles
+# S to save level to data/levels/customlevel.py
+# L to load level from data/levels/customlevel.py
+
+
 # Tile alignment grid class
 class Board:
     def __init__(self, width, height):
