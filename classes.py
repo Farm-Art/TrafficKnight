@@ -392,3 +392,12 @@ class Camera:
             object.pos.y += self.dy
         object.rect.x += self.dx
         object.rect.y += self.dy
+
+
+class Healthbar(pg.sprite.Sprite):
+    # Convenience class for healthbar in UI
+    def update(self, player):
+        self.image = HEALTHBAR[player.health]
+        self.image.set_colorkey((0, 0, 0))
+        self.rect = self.image.get_rect()
+        self.rect.bottomleft = vec(10, HEIGHT - 10)

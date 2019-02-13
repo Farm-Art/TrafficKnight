@@ -1,5 +1,5 @@
 import pygame as pg
-
+from settings import *
 
 def load_animation(name, length, scale, animations):
     key = name.split('/')[-1]
@@ -8,6 +8,14 @@ def load_animation(name, length, scale, animations):
         file = 'data/animations/' + name + '/' + (str(i) + '.png').rjust(8, '0')
         image = pg.transform.scale(pg.image.load(file), scale)
         animations[key] += [[image]]
+
+
+healthbar = pg.image.load('data/images/ui/healthbar.png')
+HEALTHBAR = {}
+for i in range(10):
+    img = pg.Surface((72, 72))
+    img.blit(healthbar, (-i * 72, 0))
+    HEALTHBAR[(i + 1) * 10] = img
 
 tileset = pg.image.load('data/images/static/tiles.png')
 SPLASH_SCREEN = pg.image.load('data/images/screens/start.png')

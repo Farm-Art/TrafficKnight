@@ -120,6 +120,7 @@ class Game:
         self.platforms = pg.sprite.Group()
         self.players = pg.sprite.Group()
         self.enemies = pg.sprite.Group()
+        self.ui = pg.sprite.Group()
 
         # Set up finish object
         self.finish = None
@@ -129,6 +130,7 @@ class Game:
             # Set up player and camera
             self.player = self.players.sprites()[0]
             self.camera = Camera()
+            self.ui.add(Healthbar())
 
             # If Easter Egg was triggered, load Smooth Criminal
             if self.ee:
@@ -163,12 +165,13 @@ class Game:
     def events(self):
         for event in pg.event.get():
             if event.type == pg.QUIT:
-                self.terminate()
+                self.playing = False
                 return
 
     def update(self):
         # Update all sprites
         self.all_sprites.update()
+        self.ui.update(self.player)
         # Check for finish condition (if present)
         if self.finish is not None:
             if pg.sprite.collide_mask(self.player, self.finish):
@@ -225,6 +228,7 @@ class Game:
 
         # Draw all sprites and flip frame
         self.all_sprites.draw(self.screen)
+        self.ui.draw(self.screen)
         pg.display.flip()
 
     def terminate(self):
